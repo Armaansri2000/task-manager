@@ -1,5 +1,5 @@
 A responsive task management web app built with React + Redux Toolkit, featuring role-based access, task CRUD, and pagination.
-The app uses localStorage as a mock backend API for development and testing.
+The app uses localStorage as a mock backend API for development and testing. 
 
  Features----
 Responsive Web UI: Works across devices and modern browsers.
