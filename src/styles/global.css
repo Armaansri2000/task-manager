@@ -1,0 +1,220 @@
+/* =============================
+   Global Styles
+============================= */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --radius: 0.6rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* =============================
+   Layout Helpers
+============================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+}
+
+.hstack {
+  display: flex;
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 1rem;
+}
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =============================
+   Buttons
+============================= */
+.btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.outline {
+  border: 1px solid var(--muted);
+  background: transparent;
+  color: var(--text);
+}
+.btn.outline:hover {
+  background: #f3f4f6;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn.danger:hover {
+  background: var(--danger-hover);
+}
+
+/* =============================
+   Cards
+============================= */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 1rem;
+}
+
+.card-head {
+  margin-bottom: 0.8rem;
+}
+
+.card-head h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* =============================
+   Inputs
+============================= */
+.input {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+/* =============================
+   Tables
+============================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.status {
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.status.todo {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.status.in_progress {
+  background: #fef9c3;
+  color: #92400e;
+}
+.status.done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* =============================
+   Overlay & Modal
+============================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.new-task-card {
+  background: #fff;
+  border-radius: var(--radius);
+  width: 380px;
+  max-width: 90%;
+  padding: 1rem;
+  max-height: 70%;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =============================
+   Login Page Centering
+============================= */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  padding: 1rem;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+}
