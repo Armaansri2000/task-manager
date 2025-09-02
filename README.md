@@ -1,40 +1,54 @@
-Features---
+A responsive task management web app built with React + Redux Toolkit, featuring role-based access, task CRUD, and pagination.
+The app uses localStorage as a mock backend API for development and testing.
 
- Authentication System
+ Features----
+Responsive Web UI: Works across devices and modern browsers.
 
-Demo accounts for Admin, Manager, and Member roles.
+Authentication:
 
-Login page centered on all screen sizes.
+Basic login with session handling.
 
- Task Management---
+Role-based access control (admin, manager, user).
 
-Create, view, and update tasks.
+User Management:
 
-Modal for creating new tasks with close functionality.
+Create new users.
 
- UI/UX---
+List all registered users.
 
-Clean card-based layout.
+Task Management:
 
-Consistent button, input, and table styling.
+Create, update, and delete tasks.
 
-Fully responsive for desktop and mobile.
+Assign tasks to users (restricted by role).
 
- Tech Stack---
+Newly created tasks always appear at the top.
 
-React (Frontend)
+Task Listing:
 
-Context API (Authentication state)
+Paginated view for performance and usability.
 
-Custom CSS (no external frameworks)
+API Integration:
+
+Local mock REST API powered by localStorage.
 
 
- Installation & Setup--
+Tech Stack----
 
-Clone the repository:
+Frontend: React (Vite)
 
-git clone https://github.com/yourusername/task-manager-app.git
-cd task-manager-app
+State Management: Redux Toolkit
+
+UI Library: TailwindCSS + ShadCN UI
+
+Routing: React Router
+
+Storage: localStorage (mock backend)
+
+ Installation & Setup----
+Clone or unzip the project:
+
+cd task-manager-assignment
 
 
 Install dependencies:
@@ -47,36 +61,22 @@ Start development server:
 npm run dev
 
 
-Demo Credentials---
+Open in browser:
 
-Use any of the following credentials to log in:
+http://localhost:
 
-Admin
- admin@example.com
- admin123
+ Default Users--
 
-Manager
- manager@example.com
- manager123
+By default, you can log in with these accounts:
 
-Member
- member@example.com
- member123
+Role	Username	Password
+Admin	admin	admin123
+User	user	user123
 
- Screens---
+Admins can create users and assign tasks. Regular users can only manage their own tasks.
 
-Login Page → Centered card with demo credentials.
+ 
+ Notes---
+Data persists in localStorage.
+To reset, open DevTools → Application → Local Storage → clear keys starting with tm_.
 
-Dashboard → Task list table + new task modal.
-
-New Task Modal → Appears at the center with a close button.
-
- Technologies Used--
-
-React 18
-
-Vite (bundler)
-
-Context API (auth state management)
-
-Custom CSS (modular, no external frameworks)
